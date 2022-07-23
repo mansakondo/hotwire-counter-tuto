@@ -28,7 +28,7 @@ class CounterController < ApplicationController
   private
     # We use Kredis to store and retrieve the counter's state
     def counter_count
-      @counter_count ||= Kredis.counter "counter:count"
+      @counter_count ||= Counter.count
     end
 
     def render_partial_update
